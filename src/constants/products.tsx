@@ -25,7 +25,7 @@ export const products = [
     description:
       "Unleash Your Creative Vision with Imaginify",
     thumbnail: "/images/Imaginify.jpeg",
-    images: ["/images/imaginify.jpeg", "/images/imaginify-2.jpeg"],
+    images: ["/images/Imaginify.jpeg", "/images/Imaginify-2.jpeg"],
     stack: ["Nextjs", "Tailwindcss", "Typescript", "MongoDB", "Cloudinary", "Stripe"],
     slug: "imaginify",
     content: (
