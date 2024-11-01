@@ -5,11 +5,7 @@ import {
 } from "@tabler/icons-react";
 
 export const socials = [
-  {
-    href: "https://twitter.com/amitkrvr",
-    label: "Twitter",
-    icon: IconBrandTwitter,
-  },
+
   {
     href: "https://linkedin.com/in/amitkrvr",
     label: "LinkedIn",
@@ -19,5 +15,10 @@ export const socials = [
     href: "https://github.com/amitkrvr",
     label: "GitHub",
     icon: IconBrandGithub,
+  },
+  {
+    href: "https://twitter.com/amitkrvr",
+    label: "Twitter",
+    icon: IconBrandTwitter,
   },
 ];

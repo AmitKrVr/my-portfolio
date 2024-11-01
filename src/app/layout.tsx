@@ -11,9 +11,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amit Kumar Verma - Developer",
+  title: {
+    template: "%s | Amit Kumar Verma - Full Stack Web Developer",
+    default:
+      "Amit Kumar Verma - Full Stack Web Developer",
+  },
   description:
-    "Amit Kumar Verma is a full-stack developer skilled in React, Next.js, Node.js, Express, MongoDB, HTML, CSS, JavaScript, Appwrite, Shadcn, Bootstrap, and Tailwind CSS. He focuses on creating impactful web apps and continuously evolves with new technologies.",
+    "Amit Kumar Verma is a full-stack developer skilled in React, Next.js, Node.js, Express, MongoDB, HTML, CSS, JavaScript, Appwrite, Shadcn, Bootstrap, and Tailwind CSS. I focus on creating impactful web applications and continuously evolve with new technologies.",
+  openGraph: {
+    title: "Amit Kumar Verma - Full Stack Web Developer",
+
+  }
 };
 
 export default function RootLayout({
