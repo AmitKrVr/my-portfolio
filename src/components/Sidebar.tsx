@@ -32,7 +32,7 @@ export const Sidebar = () => {
               <Navigation setOpen={setOpen} />
             </div>
             <div onClick={() => isMobile() && setOpen(false)}>
-              <Badge href="/resume" text="Read Resume" />
+              <Badge href="/resume" text="Read Resume" icon={<RightArrow />} />
             </div>
           </motion.div>
         )}
@@ -120,9 +120,29 @@ const SidebarHeader = () => {
         className="object-cover object-top rounded-full flex-shrink-0"
       />
       <div className="flex text-sm flex-col">
-        <p className="font-bold text-primary">Amit Kumar</p>
+        <p className="font-bold text-primary line-clamp-1">Amit Kumar Verma</p>
         <p className="font-light text-secondary">Developer</p>
       </div>
     </div>
   );
 };
+
+
+const RightArrow = () => <svg
+  width="16"
+  height="16"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <motion.path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="1.5"
+    d="M10.75 8.75L14.25 12L10.75 15.25"
+    initial={{ pathLength: 0 }}
+    animate={{ pathLength: 1 }}
+    transition={{ duration: 1 }}
+  ></motion.path>
+</svg>
