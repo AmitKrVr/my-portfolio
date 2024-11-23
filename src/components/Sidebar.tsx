@@ -21,10 +21,10 @@ export const Sidebar = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ x: -200 }}
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            transition={{ duration: 0.2, ease: "linear" }}
-            exit={{ x: -200 }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="px-6 z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit fixed lg:relative h-full sm:h-screen left-0 flex flex-col justify-between"
           >
             <div className="flex-1 overflow-auto">
@@ -37,16 +37,17 @@ export const Sidebar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <button
-        className="fixed p-0.5 lg:hidden top-4 right-4 h-8 w-8 border border-neutral-200 rounded-full backdrop-blur-sm flex items-center justify-center z-50 transition-all duration-500"
+      <motion.button
+        className="fixed p-0.5 lg:hidden top-4 right-4 h-8 w-8 border-2 border-black rounded-full backdrop-blur-sm flex items-center justify-center z-50 transition-all duration-700"
         onClick={() => setOpen(!open)}
+
       >
 
-        <IconLayoutSidebarRightCollapse className="h-6 w-6 text-secondary" />
+        <IconLayoutSidebarRightCollapse className="h-6 w-6" />
 
         {/* {open ? <Image src="/xmark.svg" alt="X" height={15} width={15} /> : <Image src="/bars.svg" alt="=" height={15} width={15} />} */}
 
-      </button>
+      </motion.button>
 
 
     </>
