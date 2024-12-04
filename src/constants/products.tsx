@@ -8,6 +8,7 @@ export const products = [
     images: ["/images/portfolio-horizon.jpeg", "/images/portfolio-horizon-2.jpeg"],
     stack: ["Nextjs", "Tailwindcss", "TypeScript", "Appwrite"],
     slug: "Horizon",
+    githubUrl: "https://github.com/AmitKrVr/horizon-banking.git",
     content: (
       <div>
         <p>
@@ -28,6 +29,7 @@ export const products = [
     images: ["/images/Imaginify.jpeg", "/images/Imaginify-2.jpeg"],
     stack: ["Nextjs", "Tailwindcss", "Typescript", "MongoDB", "Cloudinary", "Stripe"],
     slug: "imaginify",
+    githubUrl: "https://github.com/AmitKrVr/Imaginify.git",
     content: (
       <div>
         <p>
@@ -40,7 +42,7 @@ export const products = [
     ),
   },
   {
-    href: "#",
+    href: "",
     title: "Exclusive",
     description:
       "Discover the Best Deals and Latest Trends",
@@ -48,6 +50,7 @@ export const products = [
     images: ["/images/exclusive.jpeg", "/images/exclusive-2.jpeg"],
     stack: ["Nextjs", "Tailwindcss", "MongoDB", "Next Auth"],
     slug: "exclusive",
+    githubUrl: "https://github.com/AmitKrVr/exclusive.git",
     content: (
       <div>
         <p>
@@ -68,6 +71,7 @@ export const products = [
     images: ["/images/moviegpt.jpeg", "/images/moviegpt-2.jpeg", "/images/moviegpt-3.jpeg"],
     stack: ["React", "Redux Toolkit", "OpenAI API", "TMDB API"],
     slug: "movieGPT",
+    githubUrl: "https://github.com/AmitKrVr/movieGPT.git",
     content: (
       <div>
         <p>
