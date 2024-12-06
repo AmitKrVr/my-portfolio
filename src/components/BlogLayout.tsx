@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { formatDate } from "../../lib/formatDate";
+import { formatDate } from "../lib/formatDate";
 import { Prose } from "@/components/Prose";
 import { Container } from "./Container";
 import { Heading } from "./Heading";

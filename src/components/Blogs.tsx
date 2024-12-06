@@ -75,7 +75,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                 <div className="flex space-x-2 flex-wrap mt-4">
                   {blog.tags?.map((tag, index) => (
                     <span
-                      key={`tag-${blog.slug}`}
+                      key={`tag-${blog.slug}-${index}`}
                       className="text-xs px-1 py-0.5 text-secondary border border-neutral-200 bg-white rounded-md"
                     >
                       {tag}

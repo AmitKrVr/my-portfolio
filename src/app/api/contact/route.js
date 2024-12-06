@@ -1,7 +1,6 @@
-// app/api/contact/route.js
-import dbConnect from "@/utils/dbConnect"; // Utility to connect to MongoDB
+import dbConnect from "@/utils/dbConnect";
 import nodemailer from "nodemailer";
-import Contact from "@/models/Contact"; // Mongoose model for Contact
+import Contact from "@/models/Contact";
 
 export async function POST(req) {
     await dbConnect();

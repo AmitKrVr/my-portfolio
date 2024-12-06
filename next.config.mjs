@@ -5,11 +5,21 @@ import rehypePrism from "@mapbox/rehype-prism";
 
 const nextConfig = {
     images: {
-        domains: ["images.unsplash.com", "res.cloudinary.com"],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "**.unsplash.com",
+            },
+            {
+                protocol: "https",
+                hostname: "**.cloudinary.com",
+            },
+        ],
     },
     experimental: {
         mdxRs: true,
     },
+    pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 };
 
 const withMDX = nextMDX({
