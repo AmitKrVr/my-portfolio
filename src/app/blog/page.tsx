@@ -2,9 +2,9 @@ import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { getAllBlogs } from "../../../lib/getAllBlogs";
 import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
+import { getAllBlogs } from "@/lib/getAllBlogs";
 
 export const metadata: Metadata = {
   title: "Blogs | Amit Kumar Verma",

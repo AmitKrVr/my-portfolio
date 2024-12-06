@@ -3,18 +3,21 @@ import * as path from "path";
 
 async function importBlog(blogFileNames: any) {
   let { meta, default: component } = await import(
-    `src/app/blog/${blogFileNames}`
+    `@/app/blog/${blogFileNames}`
   );
   return {
-    slug: blogFileNames.replace(/(\/content)?\.mdx$/, ""),
+    slug: blogFileNames.replace(/(\/page)?\.mdx$/, ""),
     ...meta,
     component,
   };
 }
 
 export async function getAllBlogs() {
-  let blogFileNames = await glob(["*.mdx", "*/content.mdx"], {
-    cwd: path.join(process.cwd(), "src/app/blog"),
+
+  const blogDir = path.join(process.cwd(), "src/app/blog");
+
+  const blogFileNames = await glob(["*.mdx", "*/page.mdx"], {
+    cwd: blogDir,
   });
 
   let blogs = await Promise.all(blogFileNames.map(importBlog));
