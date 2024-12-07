@@ -12,6 +12,7 @@ import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
+import { ModeToggle } from "./ModeToggle";
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
@@ -26,7 +27,7 @@ export const Sidebar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[80] bg-black/30 backdrop-blur-sm"
+            className="fixed inset-0 z-[80] bg-black/30 dark:bg-white/5 backdrop-blur-sm"
             onClick={() => setOpen(false)} // Close sidebar on clicking the backdrop
           />
         }
@@ -39,11 +40,13 @@ export const Sidebar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="px-6 z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit fixed lg:relative h-full sm:h-screen left-0 flex flex-col justify-between"
+              className="pl-6 pr-2 z-[100] py-10 bg-neutral-100 dark:bg-black dark:bg-dot-white/[0.09] max-w-[14rem] lg:w-fit fixed lg:relative h-full sm:h-screen left-0 flex flex-col justify-between"
             >
               <div className="flex-1 overflow-auto">
                 <SidebarHeader />
-                <Navigation setOpen={setOpen} />
+                <div className="pr-4">
+                  <Navigation setOpen={setOpen} />
+                </div>
               </div>
               <div onClick={() => isMobile() && setOpen(false)}>
                 <Badge href="/resume" text="Read Resume" icon={<RightArrow />} />
@@ -55,13 +58,11 @@ export const Sidebar = () => {
       </AnimatePresence>
 
       <motion.button
-        className="fixed z-[100] p-0.5 lg:hidden top-4 right-4 h-8 w-8 border-2 border-black rounded-full backdrop-blur-sm flex items-center justify-center transition-all duration-700"
+        className="fixed z-[100] p-0.5 lg:hidden top-4 right-4 h-8 w-8 border-2 border-black dark:border-white rounded-full backdrop-blur-sm flex items-center justify-center transition-all duration-700"
         onClick={() => setOpen(!open)}
       >
 
         <IconLayoutSidebarRightCollapse className="h-6 w-6" />
-
-        {/* {open ? <Image src="/xmark.svg" alt="X" height={15} width={15} /> : <Image src="/bars.svg" alt="=" height={15} width={15} />} */}
 
       </motion.button>
 
@@ -87,19 +88,21 @@ export const Navigation = ({
           href={link.href}
           onClick={() => isMobile() && setOpen(false)}
           className={twMerge(
-            "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
-            isActive(link.href) && "bg-white shadow-lg text-primary"
+            "text-secondary hover:text-primary hover:dark:text-primary-light transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
+            isActive(link.href) && "bg-white dark:bg-primary shadow-lg text-primary dark:text-primary-light"
           )}
         >
           <link.icon
             className={twMerge(
               "h-4 w-4 flex-shrink-0",
-              isActive(link.href) && "text-sky-500"
+              isActive(link.href) && "text-sky-500 dark:text-primaryColor"
             )}
           />
           <span>{link.label}</span>
         </Link>
       ))}
+
+
 
       <Heading as="p" className="text-sm md:text-sm lg:text-sm pt-10 px-2">
         Socials
@@ -110,7 +113,7 @@ export const Navigation = ({
           href={link.href}
           target="_blank"
           className={twMerge(
-            "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
+            "text-secondary hover:text-primary hover:dark:text-primary-light transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
           )}
         >
           <link.icon
@@ -128,17 +131,22 @@ export const Navigation = ({
 
 const SidebarHeader = () => {
   return (
-    <div className="flex space-x-2">
-      <Image
-        src="/hero.jpg"
-        alt="Avatar"
-        height="40"
-        width="40"
-        className="object-cover object-top rounded-full flex-shrink-0"
-      />
-      <div className="flex text-sm flex-col">
-        <p className="font-bold text-primary line-clamp-1">Amit Kumar Verma</p>
-        <p className="font-light text-secondary">Developer</p>
+    <div className="flex justify-between">
+      <Link href={"/"} className="flex space-x-2">
+        <Image
+          src="/hero.jpg"
+          alt="Avatar"
+          height="40"
+          width="40"
+          className="object-cover object-top rounded-full flex-shrink-0"
+        />
+        <div className="flex text-sm flex-col">
+          <p className="font-bold text-primary dark:text-primary-dark line-clamp-1">Amit Kumar Verma</p>
+          <p className="font-light text-secondary">Developer</p>
+        </div>
+      </Link>
+      <div className="flex items-center justify-center">
+        <ModeToggle />
       </div>
     </div>
   );

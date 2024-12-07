@@ -27,7 +27,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
           <Link
             key={`blog-${blog.title}`}
             href={`/blog/${blog.slug}`}
-            className="relative my-10 block"
+            className="relative my-10 block "
             onMouseEnter={() => setHovered(blog.slug)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -50,7 +50,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                     scaleX: 0.95,
                     scaleY: 0.95,
                   }}
-                  className="absolute z-0 pointer-events-none bg-gray-50 inset-0 h-full w-full   rounded-md "
+                  className="absolute z-0 pointer-events-none bg-gray-50 dark:bg-hover-dark inset-0 h-full w-full   rounded-md "
                 />
               )}
             </AnimatePresence>
@@ -66,7 +66,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                 />
               </div>
               <div className="flex flex-col col-span-3">
-                <Heading className="text-lg md:text-lg lg:text-lg">
+                <Heading className="text-lg md:text-lg lg:text-lg text-primary dark:text-primary-dark">
                   {blog.title}
                 </Heading>
                 <Paragraph className="text-sm md:text-sm lg:text-sm mt-2">
@@ -76,7 +76,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                   {blog.tags?.map((tag, index) => (
                     <span
                       key={`tag-${blog.slug}-${index}`}
-                      className="text-xs px-1 py-0.5 text-secondary border border-neutral-200 bg-white rounded-md"
+                      className="text-xs px-1 py-0.5 text-secondary border border-neutral-200 dark:border-0 bg-gray-50 dark:bg-gray-900 rounded-md dark:rounded-sm"
                     >
                       {tag}
                     </span>
