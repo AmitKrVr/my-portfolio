@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <Container>
       <span className="text-4xl">💬</span>
-      <Heading className="font-black">About Me</Heading>
+      <Heading className="text-primary dark:text-primary-dark">About Me</Heading>
       <About />
     </Container>
   );

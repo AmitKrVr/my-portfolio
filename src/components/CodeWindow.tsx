@@ -77,7 +77,7 @@ export const CodeWindow = ({ title, children }: any) => {
           </button>
         </div>
 
-        <div ref={childRef}>{children}</div>
+        <div ref={childRef} className="px-4">{children}</div>
       </div>
     )
   );
