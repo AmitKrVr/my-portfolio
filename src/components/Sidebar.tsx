@@ -43,7 +43,7 @@ export const Sidebar = () => {
               className="pl-6 pr-2 z-[100] py-10 bg-neutral-100 dark:bg-black dark:bg-dot-white/[0.09] max-w-[14rem] lg:w-fit fixed lg:relative h-full sm:h-screen left-0 flex flex-col justify-between"
             >
               <div className="flex-1 overflow-auto">
-                <SidebarHeader />
+                <SidebarHeader setOpen={setOpen} />
                 <div className="pr-4">
                   <Navigation setOpen={setOpen} />
                 </div>
@@ -129,10 +129,10 @@ export const Navigation = ({
   );
 };
 
-const SidebarHeader = () => {
+const SidebarHeader = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boolean>>; }) => {
   return (
     <div className="flex justify-between">
-      <Link href={"/"} className="flex space-x-2">
+      <Link onClick={() => isMobile() && setOpen(false)} href={"/"} className="flex space-x-2">
         <Image
           src="/hero.jpg"
           alt="Avatar"

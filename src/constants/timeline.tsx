@@ -5,9 +5,7 @@ export const timeline = [
     date: "2023 - Present",
     description: "Developed various web applications to enhance my skills.",
     responsibilities: [
-      "Created a portfolio website using React and TypeScript.",
-      "Built a weather app using API integration.",
-      "Developed a blog platform with user authentication.",
+      "Created a portfolio website using Nextjs and TypeScript.",
       "Developed Horizon, a financial SaaS platform for managing finances.",
       "Created Imaginify, a platform for creative image editing.",
       "Built Exclusive, an e-commerce platform for diverse products.",

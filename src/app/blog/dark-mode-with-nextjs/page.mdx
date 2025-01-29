@@ -76,7 +76,7 @@ Now that our basic application structure and styling are complete, we can move o
 To do this, we need to create a state variable to track the user's preferred theme. We can do this by adding the following code to our `index.js` file:
 
 ```
-    import { useState from "react";
+    import { useState } from "react";
 
     export default function Home() {
       const [theme, setTheme] = useState("light");
@@ -108,7 +108,7 @@ Now that we have implemented the basic functionality of our dark mode toggle, we
 First, we can persist the user's theme preference using localStorage. We can do this by adding the following code to our `index.js` file:
 
 ```
-    import { useEffect, useState from "react";
+    import { useEffect, useState } from "react";
 
     export default function Home() {
       const [theme, setTheme] = useState("light");

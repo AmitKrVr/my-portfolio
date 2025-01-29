@@ -1,6 +1,27 @@
 export const products = [
   {
-    href: "https://horizon-banking-zeta.vercel.app/",
+    href: "https://qtilt.vercel.app/",
+    title: "QTilt",
+    description:
+      "QTilt is a web application for movie enthusiasts to explore, discover, and stay updated with the latest movies.",
+    thumbnail: "/images/qtilt.jpeg",
+    images: ["/images/qtilt.jpeg", "/images/qtilt-1.jpeg", "/images/qtilt-2.jpeg"],
+    stack: ["Reactjs", "JavaScript", "MongoDB", "NodeJs", "ExpressJs", "Tailwindcss",],
+    slug: "QTilt",
+    githubUrl: "https://github.com/AmitKrVr/QTilt.git",
+    content: (
+      <div>
+        <p>
+          QTilt is a web application designed for movie enthusiasts to explore and stay updated with the latest films. The platform offers a seamless way to discover upcoming, trending, top-rated, most-watched, and currently-playing movies, ensuring users never miss out on popular releases.
+        </p>
+        <p>
+          By integrating the TMDB API, QTilt provides in-depth movie details, including trailers, crew, and cast information. This allows users to not only browse movies but also gain insights into their favorite actors, directors, and behind-the-scenes teams, making QTilt a comprehensive hub for movie lovers.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "",
     title: "Horizon",
     description:
       "A financial SaaS platform designed to revolutionize how you manage your finances.",
@@ -25,8 +46,8 @@ export const products = [
     title: "Imaginify",
     description:
       "Unleash Your Creative Vision with Imaginify",
-    thumbnail: "/images/Imaginify.jpeg",
-    images: ["/images/Imaginify.jpeg", "/images/Imaginify-2.jpeg"],
+    thumbnail: "/images/imaginify.jpeg",
+    images: ["/images/imaginify.jpeg", "/images/imaginify-2.jpeg"],
     stack: ["Nextjs", "Tailwindcss", "Typescript", "MongoDB", "Cloudinary", "Stripe"],
     slug: "imaginify",
     githubUrl: "https://github.com/AmitKrVr/Imaginify.git",
