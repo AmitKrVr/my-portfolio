@@ -19,9 +19,9 @@ export default function Home() {
       </Paragraph>
       <WorkHistory />
 
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         <Badge href="https://docs.google.com/document/d/1fIClRSYPY1qr0O8v92StVOK2PNWOcwuKakUVPaEjojE/edit?usp=sharing" text="Download Resume" icon={<DownloadSvg />} />
-      </div>
+      </div> */}
 
     </Container>
   );

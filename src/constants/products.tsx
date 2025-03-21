@@ -29,7 +29,7 @@ export const products = [
     images: ["/images/portfolio-horizon.jpeg", "/images/portfolio-horizon-2.jpeg"],
     stack: ["Nextjs", "Tailwindcss", "TypeScript", "Appwrite"],
     slug: "Horizon",
-    githubUrl: "https://github.com/AmitKrVr/horizon-banking.git",
+    githubUrl: "https://github.com/AmitKrVr/Banking",
     content: (
       <div>
         <p>
