@@ -56,11 +56,11 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           alt="thumbnail"
           height="1000"
           width="1000"
-          className="rounded-md object-contain"
+          className="rounded-md object-cover"
         />
-        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
+        {/* <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" /> */}
       </motion.div>
-      <div className="flex flex-row justify-center my-8 flex-wrap">
+      <div className="flex flex-row justify-center my-8 flex-wrap gap-4">
         {product.images.map((image, idx) => (
           <button
             onClick={() => setActiveImage(image)}
@@ -71,7 +71,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
               alt="product thumbnail"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top border rounded-lg border-neutral-100"
             />
           </button>
         ))}

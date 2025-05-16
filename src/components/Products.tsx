@@ -30,7 +30,7 @@ export const Products = () => {
               key={product.href + product.title}
               className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-hover hover:dark:bg-hover-dark rounded-2xl transition duration-200 py-4 sm:pt-4 px-2"
             >
-              <div className="w-full sm:w-auto flex items-center justify-center">
+              <div className="min-w-60 flex items-center justify-center">
                 <Image
                   src={product?.thumbnail}
                   alt="thumbnail"
@@ -39,7 +39,7 @@ export const Products = () => {
                   className="rounded-md w-full"
                 />
               </div>
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col justify-between w-full">
                 <div>
                   <Heading
                     as="h4"
@@ -47,18 +47,18 @@ export const Products = () => {
                   >
                     {product.title}
                   </Heading>
-                  <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
+                  <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 line-clamp-2">
                     {product.description}
                   </Paragraph>
                 </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0 overflow-hidden">
+                <div className="flex flex-wrap gap-2 md:mb-1 mt-2 md:mt-0">
                   {product.stack?.map((stack: string) => (
-                    <span
+                    <div
                       key={stack}
-                      className="text-xs  md:text-xs lg:text-xs bg-gray-50 dark:bg-gray-900 px-2 py-1 rounded-sm text-secondary"
+                      className="text-xs min-w-max bg-gray-50 dark:bg-gray-900 px-2 py-1 rounded-sm text-secondary"
                     >
                       {stack}
-                    </span>
+                    </div>
                   ))}
                 </div>
               </div>

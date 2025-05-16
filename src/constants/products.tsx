@@ -1,5 +1,49 @@
 export const products = [
   {
+    href: "https://bookwise-library-rho.vercel.app/",
+    title: "BookWise - University Library Management Platform",
+    description:
+      "BookWise is a full-featured university library management platform with separate user and admin portals for managing books, users, and borrowing activities.",
+    thumbnail: "/images/bookwise/bookwise.png",
+    images: [
+      "/images/bookwise/bookwise.png",
+      "/images/bookwise/search.png",
+      "/images/bookwise/profile.png",
+      "/images/bookwise/signup.png",
+      "/images/bookwise/book-details.png",
+      "/images/bookwise/admin-books.png",
+      "/images/bookwise/admin-account-request.png",
+      "/images/bookwise/admin-book-borrow.png",
+      "/images/bookwise/admin-users.png",
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Auth.js",
+      "Resend",
+      "Redis",
+      "React Query",
+      "Tailwind CSS",
+    ],
+    slug: "BookWise",
+    githubUrl: "https://github.com/AmitKrVr/university-library",
+    content: (
+      <div>
+        <p>
+          BookWise is a modern university library management system designed to streamline the book borrowing process and administrative tasks. It features a separate user dashboard and admin panel, providing tailored experiences based on user roles.
+        </p>
+        <p>
+          Users can explore featured and latest books, search by title, genre, or author, view detailed book pages, and request to borrow books. The platform supports full pagination, server/client-side caching, and email notifications via Resend for key interactions like account approval and borrow status.
+        </p>
+        <p>
+          The admin panel allows staff to manage the entire library system—approving/rejecting user signups, handling book records (add, edit, delete), and overseeing borrowing requests—all built with authentication using Auth.js, PostgreSQL via Drizzle ORM, and efficient data fetching with React Query and Redis caching.
+        </p>
+      </div>
+    ),
+  },
+  {
     href: "https://qtilt.vercel.app/",
     title: "QTilt",
     description:

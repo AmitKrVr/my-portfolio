@@ -17,7 +17,7 @@ export default function Home() {
       </Paragraph>
       <Paragraph className="max-w-xl mt-4">
         I&apos;m a passionate full-stack web developer with a strong foundation in
-        a variety of technologies, including React, Next.js, Node.js, Express, MongoDB,
+        a variety of technologies, including React, Next.js, Node.js, Express, MongoDB, PostgreSQL,
         HTML, CSS, JavaScript, Appwrite, Shadcn, Bootstrap, and Tailwind CSS.
         I&apos;ve built numerous projects to hone my skills and continuously learn new technologies.
 
