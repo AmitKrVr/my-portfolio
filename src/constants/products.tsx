@@ -11,6 +11,7 @@ export const products = [
       "/images/bookwise/profile.png",
       "/images/bookwise/signup.png",
       "/images/bookwise/book-details.png",
+      "/images/bookwise/admin-dashboard.png",
       "/images/bookwise/admin-books.png",
       "/images/bookwise/admin-account-request.png",
       "/images/bookwise/admin-book-borrow.png",

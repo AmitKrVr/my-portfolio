@@ -79,11 +79,11 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="mb-2 pb-1 text-primary dark:text-primary-dark"> {product.title}</Heading>
         {/* <div className="overflow-x-auto "> */}
-        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0 max-w-min truncate">
+        <div className="flex md:mb-1 mt-2 md:mt-0 max-w-full flex-wrap gap-3">
           {product.stack?.map((stack: string) => (
             <div
               key={stack}
-              className="text-xs  md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+              className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
             >
               {stack}
             </div>
